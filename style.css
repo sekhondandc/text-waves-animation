@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #292929;
+    font-family: 'Open Sans', sans-serif;
+}
+.wave-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.text{
+    position: absolute;
+    font-size: 200px;
+    font-weight: bold;
+    line-height: 0.8em;
+    color: transparent;
+    text-shadow: 0 0 10px rgb(255 255 255 / 2%);
+}
+.wave1{
+    background: url(wave1.png) repeat-x center top;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    opacity: 0.8;
+    animation: animate_wave 10s ease-in-out infinite alternate;
+}
+.wave2{
+    background: url(wave2.png) repeat-x center center;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    opacity: 0.8;
+    animation: animate_wave 10s ease-in-out infinite alternate-reverse;
+}
+.wave3{
+    background: url(wave3.png) repeat-x center bottom;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    opacity: 0.8;
+    animation: animate_wave 10s ease-in-out infinite alternate;
+}
+@keyframes animate_wave {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
